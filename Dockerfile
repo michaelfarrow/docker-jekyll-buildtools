@@ -34,4 +34,4 @@ RUN npm config set registry http://registry.npmjs.org/ && \
 
 RUN gem install compass -v 1.0.3
 
-WORKDIR /src
+WORKDIR /src/build_tools
