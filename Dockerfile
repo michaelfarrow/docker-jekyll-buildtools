@@ -32,6 +32,7 @@ RUN npm config set registry http://registry.npmjs.org/ && \
     npm install -g --no-optional gulp-compass@2.1.0 && \
     npm install -g --no-optional gulp-modulizr@0.0.2
 
-RUN gem install compass -v 1.0.3
+RUN gem install compass -v 1.0.3 && \
+    gem install bundler -v 1.10.5
 
 WORKDIR /src/build_tools
