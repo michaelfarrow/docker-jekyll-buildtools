@@ -17,7 +17,11 @@ RUN npm config set registry http://registry.npmjs.org/ && \
     npm install -g --no-optional bower@1.4.1 && \
     npm install -g --no-optional gulp@3.8.11
 
-RUN gem install compass -v 1.0.3 && \
-    gem install bundler -v 1.10.5
+ENV BUNDLE_JOBS=2 \
+    BUNDLE_PATH=/bundle
+
+VOLUME /bundle
+
+RUN gem install bundler -v 1.10.5
 
 WORKDIR /src/build_tools
